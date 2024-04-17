@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/favicon.png">
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <link href="./assets/styles.css" rel="stylesheet">
+
+    <title>Andina</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="./index.html">
+            <img src="./assets/icons/Logo-nav.svg" alt="Andina ART" width="100" height="40"> <!-- Ajusta el path y las dimensiones de acuerdo a tu logo -->
+          </a>
+          <!-- Botón de colapso para vista móvil -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Elementos de la nav -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Agrega los elementos del menú aquí -->
+                <li class="nav-item">
+                  <a class="nav-link" href="https://andinaart.my.site.com/s/login/?language=es" target="_blank">Comunidad Andina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.andinaart.com.ar/contacto/" target="_blank">Contacto</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://mercantilandina.com.ar/" target="_blank">Mercantil Andina</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.academia-andina.com.ar/" target="_blank">Academia Andina</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://prestadores.andinaart.com.ar/" target="_blank">Prestadores</a>
+                </li>
+                
+              </ul>
+            <form class="d-flex">
+              <a href="https://www.andinaart.com.ar/cotiza/" class="btn btn-outline-success" type="submit" target="_blank">Cotizá</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-home">
+        <div class="search-section">
+            <h1 class="banner-title mb-4">Tus materiales andinos<br> <span class="title-two">siempre a mano</span></h1>
+            <img src="./assets/img/hombre-home.svg" alt="Figura de Trabajador" class="worker-figure">
+        </div>
+              <div class="input-group-container">
+                <input type="text" class="form-control input-one" placeholder="Nombre del archivo" >
+                
+                <div class="dropdown custom-checkbox" >
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuCheckbox" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seleccionar tipo de archivo
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuCheckbox">
+                        <li><input type="checkbox" id="check1"> <label for="check1">Agentes de riesgo</label></li>
+                        <li><input type="checkbox" id="check2"> <label for="check2">Instructivo</label></li>
+                        <li><input type="checkbox" id="check3"> <label for="check3">Cartel</label></li>
+                        <li><input type="checkbox" id="check4"> <label for="check4">Folleto</label></li>
+                        <li><input type="checkbox" id="check5"> <label for="check5">Video cápsula</label></li>
+                        <li><input type="checkbox" id="check6"> <label for="check6">Ficha</label></li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary search-button">Buscar</button>
+      
+            </div>
+        
+    </div>
+
+
+
+     <div class="centered-container">
+
+      <div class="view-toggle-buttons">
+
+
+
+        <button id="list-view-btn">
+         <img src="./assets/icons/icono-grid.png">
+        </button>
+        <button id="grid-view-btn">
+          <img src="./assets/icons/icono-lista.svg">
+        </button>
+    </div>
+
+    <div class="content-container">
+  
+      <!-- Vista de Lista -->
+    <div class="list-view">
+          <div class="list-item">
+              <img src="./assets/icons/agente.svg" alt="Icono agente">
+                <span>Agente De Riesgo</span>
+                <a href="./path_to_file.pdf" download="NombreDelArchivo">
+                  <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+                  <button onclick="compartir('URL_para_compartir')" class="compartir">
+           <img src="./assets/icons/compartir.svg" alt="compartir">
+                  </button>
+          </div>
+          <div class="list-item">
+            <img src="./assets/icons/map.svg" alt="Icono folleto">
+              <span>Folleto</span>
+              <a href="./path_to_file.pdf" download="NombreDelArchivo">
+                <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+                <button onclick="compartir('URL_para_compartir')" class="compartir">
+         <img src="./assets/icons/compartir.svg" alt="compartir">
+                </button>
+        </div>
+        <div class="list-item">
+          <img src="./assets/icons/instructivo.svg" alt="Icono intructivo">
+            <span>Instructivo</span>
+            <a href="./path_to_file.pdf" download="NombreDelArchivo">
+              <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+              <button onclick="compartir('URL_para_compartir')" class="compartir">
+       <img src="./assets/icons/compartir.svg" alt="compartir">
+              </button>
+      </div>
+      <div class="list-item">
+        <img src="./assets/icons/afiche.svg" alt="Icono afiche">
+          <span>Afiche</span>
+          <a href="./path_to_file.pdf" download="NombreDelArchivo">
+            <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+            <button onclick="compartir('URL_para_compartir')" class="compartir">
+     <img src="./assets/icons/compartir.svg" alt="compartir">
+            </button>
+    </div>
+    <div class="list-item">
+      <img src="./assets/icons/video.svg" alt="Icono Capsula">
+        <span>Video Cápsula</span>
+        <a href="./path_to_file.pdf" download="NombreDelArchivo">
+          <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+          <button onclick="compartir('URL_para_compartir')" class="compartir">
+   <img src="./assets/icons/compartir.svg" alt="compartir">
+          </button>
+  </div>
+  <div class="list-item">
+    <img src="./assets/icons/ficha.svg" alt="Icono ficha">
+      <span>Ficha</span>
+      <a href="./path_to_file.pdf" download="NombreDelArchivo">
+        <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+        <button onclick="compartir('URL_para_compartir')" class="compartir">
+ <img src="./assets/icons/compartir.svg" alt="compartir">
+        </button>
+      </div>
+      <div class="list-item">
+        <img src="./assets/icons/video.svg" alt="Icono Capsula">
+          <span>Video Cápsula</span>
+          <a href="./path_to_file.pdf" download="NombreDelArchivo">
+            <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+            <button onclick="compartir('URL_para_compartir')" class="compartir">
+     <img src="./assets/icons/compartir.svg" alt="compartir">
+            </button>
+          </div>
+          <div class="list-item">
+            <img src="./assets/icons/video.svg" alt="Icono Capsula">
+              <span>Video Cápsula</span>
+              <a href="./path_to_file.pdf" download="NombreDelArchivo">
+                <img src="./assets/icons/descargar.svg" alt="descargar"></a>
+                <button onclick="compartir('URL_para_compartir')" class="compartir">
+         <img src="./assets/icons/compartir.svg" alt="compartir">
+                </button>
+        </div>
+      </div>
+  
+      <!-- Vista de Grid -->
+      <div class="grid-view">
+        <div class="grid-item">
+            <div class="grid-item-content">
+              <span class="item-title">Agente De Riesgo</span>
+                <img src="./assets/icons/agente.svg" alt="Icono agente" class="icon">
+              
+            </div>
+            <div class="grid-item-actions">
+                <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+                    <img src="./assets/icons/descargar.svg" alt="Descargar">
+                </a>
+                <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+                    <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+                </button>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-content">
+              <span class="item-title">Folleto</span>
+                <img src="./assets/icons/map.svg" alt="Icono agente" class="icon">
+              
+            </div>
+            <div class="grid-item-actions">
+                <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+                    <img src="./assets/icons/descargar.svg" alt="Descargar">
+                </a>
+                <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+                    <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+                </button>
+            </div>
+        </div>
+      <div class="grid-item">
+        <div class="grid-item-content">
+          <span class="item-title">Instructivo</span>
+            <img src="./assets/icons/instructivo.svg" alt="Icono agente" class="action-icon">
+          
+        </div>
+        <div class="grid-item-actions">
+            <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+                <img src="./assets/icons/descargar.svg" alt="Descargar">
+            </a>
+            <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+                <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+            </button>
+        </div>
+    </div>
+    <div class="grid-item">
+      <div class="grid-item-content">
+        <span class="item-title">Afiche</span>
+          <img src="./assets/icons/afiche.svg" alt="Icono agente" class="action-icon">
+        
+      </div>
+      <div class="grid-item-actions">
+          <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+              <img src="./assets/icons/descargar.svg" alt="Descargar">
+          </a>
+          <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+              <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+          </button>
+      </div>
+  </div>
+  <div class="grid-item">
+    <div class="grid-item-content">
+      <span class="item-title">Video<br> Cápsula</span>
+        <img src="./assets/icons/video.svg" alt="Icono agente" class="action-icon">
+      
+    </div>
+    <div class="grid-item-actions">
+        <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+            <img src="./assets/icons/descargar.svg" alt="Descargar">
+        </a>
+        <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+            <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+        </button>
+    </div>
+</div>
+<div class="grid-item">
+  <div class="grid-item-content">
+    <span class="item-title">Ficha</span>
+      <img src="./assets/icons/ficha.svg" alt="Icono agente" class="action-icon">
+    
+  </div>
+  <div class="grid-item-actions">
+      <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+          <img src="./assets/icons/descargar.svg" alt="Descargar">
+      </a>
+      <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+          <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+      </button>
+  </div>
+</div>
+<div class="grid-item">
+  <div class="grid-item-content">
+    <span class="item-title">Video<br> Cápsula</span>
+      <img src="./assets/icons/video.svg" alt="Icono agente" class="action-icon">
+    
+  </div>
+  <div class="grid-item-actions">
+      <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+          <img src="./assets/icons/descargar.svg" alt="Descargar">
+      </a>
+      <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+          <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+      </button>
+  </div>
+</div> 
+<div class="grid-item">
+  <div class="grid-item-content">
+    <span class="item-title">Video<br> Cápsula</span>
+      <img src="./assets/icons/video.svg" alt="Icono agente" class="action-icon">
+    
+  </div>
+  <div class="grid-item-actions">
+      <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+          <img src="./assets/icons/descargar.svg" alt="Descargar">
+      </a>
+      <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+          <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+      </button>
+  </div>
+</div> 
+<div class="grid-item">
+  <div class="grid-item-content">
+    <span class="item-title">Instructivo</span>
+      <img src="./assets/icons/instructivo.svg" alt="Icono agente" class="action-icon">
+    
+  </div>
+  <div class="grid-item-actions">
+      <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+          <img src="./assets/icons/descargar.svg" alt="Descargar">
+      </a>
+      <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+          <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+      </button>
+  </div>
+</div>
+<div class="grid-item">
+  <div class="grid-item-content">
+    <span class="item-title">Afiche</span>
+      <img src="./assets/icons/afiche.svg" alt="Icono agente" class="action-icon">
+    
+  </div>
+  <div class="grid-item-actions">
+      <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+          <img src="./assets/icons/descargar.svg" alt="Descargar">
+      </a>
+      <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+          <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+      </button>
+  </div>
+</div>
+<div class="grid-item">
+  <div class="grid-item-content">
+    <span class="item-title">Instructivo</span>
+      <img src="./assets/icons/instructivo.svg" alt="Icono agente" class="action-icon">
+    
+  </div>
+  <div class="grid-item-actions">
+      <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+          <img src="./assets/icons/descargar.svg" alt="Descargar">
+      </a>
+      <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+          <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+      </button>
+  </div>
+</div>
+<div class="grid-item">
+  <div class="grid-item-content">
+    <span class="item-title">Afiche</span>
+      <img src="./assets/icons/afiche.svg" alt="Icono agente" class="action-icon">
+    
+  </div>
+  <div class="grid-item-actions">
+      <a href="./path_to_file.pdf" download="NombreDelArchivo" class="action-icon">
+          <img src="./assets/icons/descargar.svg" alt="Descargar">
+      </a>
+      <button onclick="compartir('URL_para_compartir')" class="action-icon compartir">
+          <img src="./assets/icons/compartir-grid.svg" alt="Compartir">
+      </button>
+  </div>
+</div>
+
+
+
+</div>
+    
+  
+      <!-- Paginación (contador para pasar) -->
+      <div class="pagination">
+        <button id="prev-button" >&lt;</button>
+        <button class="page-number active">1</button> 
+        <button class="page-number">2</button>
+        <button class="page-number">3</button>
+        <button class="page-number">4</button>
+        <button class="page-number">5</button>
+        <button id="next-button">&gt;</button> 
+    </div>
+  </div>
+    </div>
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    
+
+       <!-- Footer -->
+<footer class="footer-custom">
+  <div class="container">
+    <div class="row">
+      <!-- Links -->
+      <div class="footer-links">
+        <div class="single-link-group">
+          <a href="https://www.andinaart.com.ar/cotiza/" target="_blank">Cotizá</a>
+          <a href="https://www.andinaart.com.ar/preguntas-frecuentes/" target="_blank">Preguntas Frecuentes</a>
+        </div>
+        <div class="single-link-group">
+          <a href="./prevencion.pdf" target="_blank">Prevención<br> contra el fraude</a>
+          
+        </div>
+        <div class="single-link-group">
+          <a href="https://mercantilandina.com.ar/" target="_blank">Mercantil Andina</a>
+          <a href="https://www.andinaart.com.ar/terminos-y-condiciones/" target="_blank">Términos y condiciones</a>
+        </div>
+        <div class="single-link-group">
+          <a href="https://andinaart.my.site.com/s/login/?language=es" target="_blank">Comunidad Andina</a>
+          <a class="equipo" href="./form.html">Sumate al equipo  Andina</a>
+            <a href="https://andinaart.com.ar/viajes-al-exterior/" target="_blank">Viajes al exterior</a>
+        </div>
+        
+      </div>
+      <!-- Social Icons -->
+      <div class="footer-icons">
+        <a href="tel:++08004444040" class="footer-icon-link">
+          <img src="./assets/icons/phone.svg" alt="Phone" class="footer-icon">
+        </a>
+        <a href="https://www.andinaart.com.ar/#" target="_blank" class="footer-icon-link">
+          <img src="./assets/icons/pin.svg" alt="Pin" class="footer-icon">
+        </a>
+        <a href="mailto:clientes@andinaart.com.ar" class="footer-icon-link">
+          <img src="./assets/icons/mail1.svg" alt="Email" class="footer-icon">
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5491131759934" target="_blank" class="footer-icon-link">
+          <img src="./assets/icons/what.svg" alt="WhatsApp" class="footer-icon">
+        </a>
+        <a href="https://www.linkedin.com/company/andina-art/" target="_blank" class="footer-icon-link">
+          <img src="./assets/icons/link.svg" alt="Linkedin" class="footer-icon">
+        </a>
+        <a href="https://www.youtube.com/@AcademiaAndina-AndinaART" target="_blank" class="footer-icon-link">
+          <img src="./assets/icons/yt.svg" alt="YouTube" class="footer-icon">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--
+<div class="end-bar">
+  <div class="end-text-groups">
+      <p  class="info-legal">LOS SEGUROS SON EMITIDOS POR ANDINA ART .A: Necochea 183, Ciudad de<br>Mendoza. Mendoza. CUIT 33-71699299-9, N° DE INSCRIPCIÓN EN SSN: XXx,<br>SUPERINTENDENCIA DE SEGUROS DE LA NACIÓN 0-800-666-8400, WWW.SSN.GOB.AR </p>
+    <a href="https://www.argentina.gob.ar/superintendencia-de-seguros ">
+      <img src="./assets/img/superintendencia.svg" alt="Logo 1" class="end-logo">
+    </a>
+      <p >Atención al asegurado<br>0800 - 666 - 8400</p>
+      <a href="https://www.argentina.gob.ar/srt ">
+      <img src="./assets/img/srt.svg" alt="Logo 2" class="end-logo">
+      </a>
+      <p>Contacto SRT<br>0800 - 666 - 6778</p>
+  </div>
+
+</div>-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+   document.addEventListener('DOMContentLoaded', function () {
+  // Seleccionar botones y contenedores de vistas
+  var listViewButton = document.getElementById('list-view-btn');
+  var gridViewButton = document.getElementById('grid-view-btn');
+  var listView = document.querySelector('.list-view');
+  var gridView = document.querySelector('.grid-view');
+
+  // Función para activar la vista de lista
+  listViewButton.addEventListener('click', function () {
+    gridView.style.display = 'none';
+    listView.style.display = 'block';
+  });
+
+  // Función para activar la vista de cuadrícula
+  gridViewButton.addEventListener('click', function () {
+    listView.style.display = 'none';
+    gridView.style.display = 'grid';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const prevButton = document.getElementById('prev-button');
+  const nextButton = document.getElementById('next-button');
+  const pageNumberButtons = document.querySelectorAll('.page-number');
+
+  let currentPage = 1;
+
+  const updatePagination = () => {
+    pageNumberButtons.forEach(button => {
+      button.classList.remove('active');
+    });
+    pageNumberButtons[currentPage - 1].classList.add('active');
+  };
+
+  prevButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      updatePagination();
+    }
+  });
+
+  nextButton.addEventListener('click', () => {
+    if (currentPage < pageNumberButtons.length) {
+      currentPage++;
+      updatePagination();
+    }
+  });
+
+  pageNumberButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      currentPage = parseInt(e.target.textContent);
+      updatePagination();
+    });
+  });
+});
+
+
+    </script>
+  
+<script>
+  function compartir(url) {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Compartir Documento',
+        url: url
+      }).then(() => {
+        console.log('Documento compartido con éxito');
+      }).catch(console.error);
+    } else {
+      // Fallback para navegadores que no soportan la API de compartir
+      alert('Tu navegador no soporta la función de compartir');
+    }
+  }
+</script>
+  
+<script>
+  window.onscroll = function() {myFunction()};
+
+var navbar = document.querySelector(".navbar");
+
+
+var sticky = navbar.offsetTop;
+
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+</script>
+
+  </body>
+</html>
