@@ -1173,9 +1173,9 @@ right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
 
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .logo-container {
@@ -1200,7 +1200,7 @@ right: 0;
 
 .login-form{
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 95px;
 
 }
 .login-form form {
@@ -1272,13 +1272,14 @@ right: 0;
 }
 
 .pastillas {
-    top: -40%;
-    right: 0;
+
+    top: -55%;
+    right: -10%;
    z-index: -1;
 }
 
 .burbuja {
-    bottom: -60%;
+    bottom: -80%;
     left: -20%;
     z-index: -1;
 }
@@ -1315,12 +1316,17 @@ padding-left: 10px;
 @media (max-width: 768px)
 {
 .login-container{
-  padding-bottom: 50px;
+  padding-bottom: 70px;
+  padding-top: 100px;
 }
 
+.login-form{
+  margin-top: 50px;
+}
 
 .login-form form{
  width: 300px;
+ 
 }
 .login-form h1 {
   font-size: 18px;
