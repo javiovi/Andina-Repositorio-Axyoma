@@ -77,9 +77,10 @@
                         <li><input type="checkbox" id="check1"> <label for="check1">Agentes de riesgo</label></li>
                         <li><input type="checkbox" id="check2"> <label for="check2">Instructivo</label></li>
                         <li><input type="checkbox" id="check3"> <label for="check3">Cartel</label></li>
-                        <li><input type="checkbox" id="check4"> <label for="check4">Folleto</label></li>
-                        <li><input type="checkbox" id="check5"> <label for="check5">Video cápsula</label></li>
-                        <li><input type="checkbox" id="check6"> <label for="check6">Ficha</label></li>
+                        <li><input type="checkbox" id="check4"> <label for="check4">Afiche</label></li> 
+                        <li><input type="checkbox" id="check5"> <label for="check5">Folleto</label></li>
+                        <li><input type="checkbox" id="check6"> <label for="check6">Video cápsula</label></li>
+                        <li><input type="checkbox" id="check7"> <label for="check8">Ficha</label></li>
                     </ul>
                 </div>
                 <button class="btn btn-primary search-button">Buscar</button>
@@ -92,10 +93,16 @@
 
      <div class="centered-container">
 
+      <div class="mobile-archive-button">
+        <button>
+          <img src="./assets/icons/flecha-izquierda.svg" alt="Flecha">
+          <span>Archivos</span>
+        </button>
+      </div>
+
+
+
       <div class="view-toggle-buttons">
-
-
-
         <button id="list-view-btn">
          <img src="./assets/icons/icono-grid.png">
         </button>
@@ -162,9 +169,9 @@
  <img src="./assets/icons/compartir.svg" alt="compartir">
         </button>
       </div>
-      <div class="list-item">
-        <img src="./assets/icons/video.svg" alt="Icono Capsula">
-          <span>Video Cápsula</span>
+      <div class="list-item-1">
+        <img src="./assets/icons/cartel.svg" alt="Icono Capsula">
+          <span >Cartel</span>
           <a href="./path_to_file.pdf" download="NombreDelArchivo">
             <img src="./assets/icons/descargar.svg" alt="descargar"></a>
             <button onclick="compartir('URL_para_compartir')" class="compartir">
@@ -276,8 +283,8 @@
 </div>
 <div class="grid-item">
   <div class="grid-item-content">
-    <span class="item-title">Video<br> Cápsula</span>
-      <img src="./assets/icons/video.svg" alt="Icono agente" class="action-icon">
+    <span class="item-title">Cartel</span>
+      <img src="./assets/icons/cartel.svg" alt="Icono agente" class="action-icon">
     
   </div>
   <div class="grid-item-actions">
@@ -522,6 +529,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
       updatePagination();
     });
   });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var searchButton = document.querySelector('.search-button');
+    var centeredContainer = document.querySelector('.centered-container');
+
+    searchButton.addEventListener('click', function() {
+        centeredContainer.classList.toggle('active');
+    });
 });
 
 
