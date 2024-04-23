@@ -83,10 +83,10 @@
             <form id="loginForm">
                 <label for="dni" class="label-date">DNI</label>
                 <input type="text" id="dni" name="dni" >
-                <label for="password" class="label-date">Contraseña</label>
-                <input type="password" id="password" name="password">
-                <div id="error-message" class="error">
-                    Alguno de los datos que ingresaste es incorrecto.
+          <!--  <label for="password" class="label-date">Contraseña</label>
+                <input type="password" id="password" name="password"> -->
+                <div id="error-message" class="error"> 
+                    El número que ingresaste es incorrecto.
                 </div>
                 <button type="submit">Ingresar</button>
               
@@ -171,7 +171,7 @@
     event.preventDefault(); 
 
     var dni = document.getElementById('dni').value;
-    var password = document.getElementById('password').value;
+   
     var errorMessage = document.getElementById('error-message');
 
     if (!dni || !password) {

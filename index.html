@@ -62,9 +62,10 @@
       </nav>
 
       <div class="container-home">
-        <div class="search-section">
+        <div class="search-section" id="search-section">
             <h1 class="banner-title mb-4">Tus materiales andinos<br> <span class="title-two">siempre a mano</span></h1>
             <img src="./assets/img/hombre-home.svg" alt="Figura de Trabajador" class="worker-figure">
+            <img src="./assets/img/cartel-derecho.svg" alt="Cartel Derecho" class="cartel-right">
         </div>
               <div class="input-group-container">
                 <input type="text" class="form-control input-one" placeholder="Nombre del archivo" >
@@ -95,7 +96,8 @@
 
       <div class="mobile-archive-button">
         <button>
-          <img src="./assets/icons/flecha-izquierda.svg" alt="Flecha">
+<a href="#search-section">   
+     <img src="./assets/icons/flecha-izquierda.svg" alt="Flecha"> </a>
           <span>Archivos</span>
         </button>
       </div>
@@ -391,19 +393,6 @@
     </div>
   
 
-  
-
-
-
-
-
-
-
-
-
-
-
-    
 
        <!-- Footer -->
 <footer class="footer-custom">
@@ -539,8 +528,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Funcion checkbox seleccionados en menu
+const dropdownButton = document.querySelector('#dropdownMenuCheckbox');
+const checkboxes = document.querySelectorAll('.dropdown-menu [type="checkbox"]');
 
-    </script>
+
+function updateButtonLabel() {
+  const checkedItems = [];
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      checkedItems.push(checkbox.nextElementSibling.textContent);
+    }
+  });
+  dropdownButton.textContent = checkedItems.length > 0 ? checkedItems.join(', ') : 'Seleccionar tipo de archivo';
+}
+
+
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', updateButtonLabel);
+});
+
+
+//Funcion en mobile seleccionado 
+
+function updateButtonText() {
+  const checkboxes = document.querySelectorAll('.dropdown-menu input[type="checkbox"]');
+  const buttonTextSpan = document.querySelector('.mobile-archive-button span');
+  let selected = [];
+
+  checkboxes.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      selected.push(checkbox.nextElementSibling.textContent);
+    }
+  });
+
+  if (selected.length === 0) {
+    buttonTextSpan.textContent = ''; 
+  } else {
+    buttonTextSpan.textContent = selected.join(', ');
+  }
+}
+
+
+updateButtonText();
+
+
+document.querySelectorAll('.dropdown-menu input[type="checkbox"]').forEach(function(checkbox) {
+  checkbox.addEventListener('change', updateButtonText);
+});
+
+
+</script>
   
 <script>
   function compartir(url) {
